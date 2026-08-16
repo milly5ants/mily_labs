@@ -191,13 +191,12 @@ p { margin: 0; }
   margin-bottom: 20px;
   max-width: 15ch;
 }
-.hero__desc {
+.hero__eyebrow {
+  font-size: 1.15rem;
+  font-weight: 600;
   color: var(--c-text-soft);
-  font-size: 1.05rem;
-  max-width: 46ch;
-  margin-bottom: 26px;
+  margin-bottom: 14px;
 }
-
 .tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
 .tag {
   font-size: 0.82rem;

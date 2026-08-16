@@ -8,11 +8,11 @@ baseurl: "/mily_labs"
 
 # Build settings
 markdown: kramdown
+future: true
 kramdown:
   input: GFM
 permalink: /posts/:year-:month-:day-:title/
 
-collections_dir: .
 
 defaults:
   - scope:
