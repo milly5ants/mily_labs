@@ -1,16 +1,33 @@
-title: "Jamily Labs"
-description: "Estudando, criando e anotando coisas sobre tecnologia."
+title: "jaja ♡"
+description: "Estudando, criando e anotando coisas sobre tecnologia, projetos e vida de dev."
+author: "Jaja"
 
+# GitHub Pages
 url: "https://milly5ants.github.io"
 baseurl: "/mily_labs"
 
+# Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+permalink: /posts/:year-:month-:day-:title/
 
-permalink: /posts/:title/
+collections_dir: .
 
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
-      layout: post
+      layout: "post"
+
+# Não publicar arquivos que não fazem parte do site
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+plugins:
+  - jekyll-feed

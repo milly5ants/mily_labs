@@ -1,32 +1,29 @@
 ---
 layout: default
 ---
+<article class="post-page">
+  <div class="wrap post-page__wrap">
+    <a class="back-link" href="{{ '/posts/' | relative_url }}">← voltar para posts</a>
 
-<article class="single-post">
+    <p class="eyebrow eyebrow--pill post-page__category">{{ page.category }}</p>
 
-    <div class="single-post-header">
+    <h1 class="post-page__title">{{ page.title }}</h1>
 
-        {% if page.category %}
-            <span class="post-tag">
-                {{ page.category }}
-            </span>
-        {% endif %}
+    <p class="post-page__meta">
+      {{ page.date | date: "%d %b %Y" }}
+      {% if page.read_time %} · {{ page.read_time }}{% endif %}
+    </p>
 
-        <h1>
-            {{ page.title }}
-        </h1>
+    {% if page.image %}
+    <div class="post-page__image">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
 
-        <div class="single-post-date">
-            {{ page.date | date: "%d/%m/%Y" }}
-        </div>
-
+    <div class="post-page__content">
+      {{ content }}
     </div>
 
-
-    <div class="single-post-content">
-
-        {{ content }}
-
-    </div>
-
+    <a class="back-link back-link--bottom" href="{{ '/posts/' | relative_url }}">← voltar para posts</a>
+  </div>
 </article>

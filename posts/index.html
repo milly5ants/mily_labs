@@ -1,0 +1,27 @@
+---
+layout: default
+title: posts
+permalink: /posts/
+---
+
+<section class="page-header">
+  <div class="wrap">
+    <p class="eyebrow">todos os posts</p>
+    <h1>Posts</h1>
+    <p class="page-header__desc">Tudo o que venho estudando, testando e documentando por aqui.</p>
+  </div>
+</section>
+
+<section class="latest-posts latest-posts--full">
+  <div class="wrap">
+    {% if site.posts.size > 0 %}
+      <div class="post-grid">
+        {% for post in site.posts %}
+          {% include post-card.html post=post %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="empty-state">Ainda não há posts publicados. Volte em breve ✨</p>
+    {% endif %}
+  </div>
+</section>
