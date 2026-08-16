@@ -1,0 +1,207 @@
+---
+layout: default
+---
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="eyebrow">
+                oi, eu sou a jaja 👋
+            </span>
+
+            <h1>
+                Estudando, criando e anotando
+                coisas sobre tecnologia.
+            </h1>
+
+            <p>
+                Um espaço para registrar o que estou
+                aprendendo, os projetos que estou
+                construindo e algumas descobertas
+                pelo caminho.
+            </p>
+
+
+            <div class="tags">
+
+                <span>Java</span>
+                <span>Backend</span>
+                <span>Automação</span>
+                <span>Dados</span>
+                <span>IA</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-illustration">
+
+            <div class="illustration-card">
+
+                <div class="plant">🌿</div>
+
+                <div class="person">
+                    👩🏻‍💻
+                </div>
+
+                <div class="laptop">
+                    💻
+                </div>
+
+                <div class="coffee">
+                    ☕
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="posts-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Últimos posts
+            </h2>
+
+            <a href="#posts">
+                ver todos →
+            </a>
+
+        </div>
+
+
+        <div
+            class="posts-grid"
+            id="posts"
+        >
+
+            {% for post in site.posts limit:6 %}
+
+            <article class="post-card">
+
+                {% if post.image %}
+
+                <img
+                    src="{{ post.image | relative_url }}"
+                    alt="{{ post.title }}"
+                    class="post-card-image"
+                >
+
+                {% else %}
+
+                <div class="post-card-placeholder">
+
+                    {% if post.category == "Java" %}
+                        ☕
+                    {% elsif post.category == "Projeto" %}
+                        💻
+                    {% elsif post.category == "Automação" %}
+                        ⚙️
+                    {% elsif post.category == "Dados" %}
+                        📊
+                    {% else %}
+                        ✨
+                    {% endif %}
+
+                </div>
+
+                {% endif %}
+
+
+                <div class="post-card-body">
+
+                    <span class="card-category">
+                        {{ post.category }}
+                    </span>
+
+                    <h3>
+                        <a href="{{ post.url | relative_url }}">
+                            {{ post.title }}
+                        </a>
+                    </h3>
+
+                    <p>
+                        {{ post.description }}
+                    </p>
+
+                    <div class="card-footer">
+
+                        <span>
+                            {{ post.date | date: "%d/%m/%Y" }}
+                        </span>
+
+                        <a href="{{ post.url | relative_url }}">
+                            ler →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="about-preview">
+
+    <div class="container about-grid">
+
+        <div>
+
+            <span class="eyebrow">
+                um pouquinho sobre mim
+            </span>
+
+            <h2>
+                Estou aprendendo
+                enquanto construo.
+            </h2>
+
+            <p>
+                Aqui eu registro meus estudos, projetos,
+                dúvidas, descobertas e tudo aquilo que
+                fizer sentido guardar pelo caminho.
+            </p>
+
+            <a
+                href="{{ '/sobre/' | relative_url }}"
+                class="text-link"
+            >
+                conhecer mais sobre mim →
+            </a>
+
+        </div>
+
+
+        <div class="about-decoration">
+
+            <span>☕</span>
+
+            <span>💻</span>
+
+            <span>🌱</span>
+
+        </div>
+
+    </div>
+
+</section>
