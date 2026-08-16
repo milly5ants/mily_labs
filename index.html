@@ -2,78 +2,279 @@
 layout: default
 ---
 
+<!-- HERO -->
 <section class="hero">
-
     <div class="container hero-content">
 
         <div class="hero-text">
 
-            <span class="eyebrow">
+            <div class="hello">
                 oi, eu sou a jaja 👋
-            </span>
+            </div>
 
             <h1>
                 Estudando, criando e anotando
                 coisas sobre tecnologia.
             </h1>
 
-            <p>
-                Um espaço para registrar o que estou
-                aprendendo, os projetos que estou
-                construindo e algumas descobertas
+            <p class="hero-description">
+                Estudando, criando e anotando coisas sobre
+                tecnologia, projetos e tudo que vou aprendendo
                 pelo caminho.
             </p>
 
-
             <div class="tags">
-
                 <span>Java</span>
                 <span>Backend</span>
                 <span>Automação</span>
                 <span>Dados</span>
                 <span>IA</span>
-
             </div>
+
+            <a href="#posts" class="primary-button">
+                explorar posts →
+            </a>
 
         </div>
 
 
+        <!-- ILUSTRAÇÃO -->
         <div class="hero-illustration">
 
-            <div class="illustration-card">
+            <svg
+                class="illustration"
+                viewBox="0 0 430 350"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="Ilustração de uma pessoa estudando no notebook"
+            >
 
-                <div class="plant">🌿</div>
+                <!-- pequenos brilhos -->
+                <g class="sparkles">
+                    <text x="65" y="70">✦</text>
+                    <text x="355" y="80">✦</text>
+                    <text x="325" y="125">+</text>
+                    <text x="90" y="125">·</text>
+                </g>
 
-                <div class="person">
-                    👩🏻‍💻
-                </div>
+                <!-- plaquinha -->
+                <g class="note">
+                    <rect
+                        x="310"
+                        y="35"
+                        width="80"
+                        height="58"
+                        rx="4"
+                    />
 
-                <div class="laptop">
-                    💻
-                </div>
+                    <text
+                        x="350"
+                        y="58"
+                        text-anchor="middle"
+                    >
+                        FICA
+                    </text>
 
-                <div class="coffee">
-                    ☕
-                </div>
+                    <text
+                        x="350"
+                        y="73"
+                        text-anchor="middle"
+                    >
+                        POR AQUI
+                    </text>
+                </g>
 
-            </div>
+                <!-- planta -->
+                <g class="plant">
+
+                    <path
+                        d="M365 300 C365 245 375 205 400 170"
+                        fill="none"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                    />
+
+                    <ellipse
+                        cx="382"
+                        cy="230"
+                        rx="15"
+                        ry="27"
+                        transform="rotate(30 382 230)"
+                    />
+
+                    <ellipse
+                        cx="365"
+                        cy="260"
+                        rx="15"
+                        ry="27"
+                        transform="rotate(-35 365 260)"
+                    />
+
+                    <ellipse
+                        cx="395"
+                        cy="200"
+                        rx="15"
+                        ry="27"
+                        transform="rotate(35 395 200)"
+                    />
+
+                    <ellipse
+                        cx="400"
+                        cy="270"
+                        rx="13"
+                        ry="24"
+                        transform="rotate(45 400 270)"
+                    />
+
+                </g>
+
+
+                <!-- cadeira -->
+                <path
+                    class="chair"
+                    d="M265 170
+                       C310 170 325 205 315 255
+                       L290 300
+                       L235 300
+                       L255 245
+                       Z"
+                />
+
+
+                <!-- cabelo -->
+                <path
+                    class="hair"
+                    d="M170 75
+                       C120 75 105 130 130 175
+                       C140 195 160 205 180 200
+                       C205 195 220 170 220 135
+                       C220 100 205 75 170 75Z"
+                />
+
+
+                <!-- rosto -->
+                <ellipse
+                    class="skin"
+                    cx="175"
+                    cy="125"
+                    rx="42"
+                    ry="48"
+                />
+
+                <!-- cabelo frente -->
+                <path
+                    class="hair"
+                    d="M135 115
+                       C135 82 165 72 195 88
+                       C215 100 215 125 202 135
+                       C195 112 180 110 168 125
+                       C155 140 142 138 135 115Z"
+                />
+
+
+                <!-- corpo -->
+                <path
+                    class="shirt"
+                    d="M125 205
+                       C140 185 205 180 230 205
+                       L260 270
+                       L110 270
+                       Z"
+                />
+
+
+                <!-- braço -->
+                <path
+                    class="skin"
+                    d="M205 210
+                       C220 220 235 235 250 245
+                       L235 258
+                       C215 245 195 230 185 220
+                       Z"
+                />
+
+
+                <!-- notebook -->
+                <g class="laptop">
+
+                    <path
+                        d="M120 245
+                           L270 245
+                           L290 290
+                           L100 290
+                           Z"
+                    />
+
+                    <rect
+                        x="130"
+                        y="205"
+                        width="130"
+                        height="82"
+                        rx="5"
+                    />
+
+                    <rect
+                        class="screen"
+                        x="140"
+                        y="215"
+                        width="110"
+                        height="62"
+                        rx="3"
+                    />
+
+                    <path
+                        d="M100 290
+                           L290 290
+                           L305 300
+                           L85 300
+                           Z"
+                    />
+
+                </g>
+
+
+                <!-- café -->
+                <g class="coffee">
+
+                    <ellipse
+                        cx="70"
+                        cy="285"
+                        rx="25"
+                        ry="7"
+                    />
+
+                    <path
+                        d="M50 280
+                           L55 250
+                           L88 250
+                           L93 280
+                           Z"
+                    />
+
+                    <path
+                        d="M88 257
+                           C110 255 108 278 91 275"
+                        fill="none"
+                        stroke-width="5"
+                    />
+
+                </g>
+
+            </svg>
 
         </div>
 
     </div>
-
 </section>
 
 
-<section class="posts-section">
+<!-- POSTS -->
+<section class="posts-section" id="posts">
 
     <div class="container">
 
         <div class="section-heading">
 
-            <h2>
-                Últimos posts
-            </h2>
+            <h2>Últimos posts</h2>
 
             <a href="#posts">
                 ver todos →
@@ -82,47 +283,44 @@ layout: default
         </div>
 
 
-        <div
-            class="posts-grid"
-            id="posts"
-        >
+        <div class="posts-grid">
 
-            {% for post in site.posts limit:6 %}
+            {% for post in site.posts limit:3 %}
 
             <article class="post-card">
 
                 {% if post.image %}
 
-                <img
-                    src="{{ post.image | relative_url }}"
-                    alt="{{ post.title }}"
-                    class="post-card-image"
-                >
+                    <img
+                        src="{{ post.image | relative_url }}"
+                        alt="{{ post.title }}"
+                        class="post-image"
+                    >
 
                 {% else %}
 
-                <div class="post-card-placeholder">
+                    <div class="post-image placeholder">
 
-                    {% if post.category == "Java" %}
-                        ☕
-                    {% elsif post.category == "Projeto" %}
-                        💻
-                    {% elsif post.category == "Automação" %}
-                        ⚙️
-                    {% elsif post.category == "Dados" %}
-                        📊
-                    {% else %}
-                        ✨
-                    {% endif %}
+                        {% if post.category == "Java" %}
+                            ☕
+                        {% elsif post.category == "Projeto" %}
+                            💻
+                        {% elsif post.category == "Automação" %}
+                            ⚙️
+                        {% elsif post.category == "Dados" %}
+                            📊
+                        {% else %}
+                            ✦
+                        {% endif %}
 
-                </div>
+                    </div>
 
                 {% endif %}
 
 
-                <div class="post-card-body">
+                <div class="post-card-content">
 
-                    <span class="card-category">
+                    <span class="post-category">
                         {{ post.category }}
                     </span>
 
@@ -136,7 +334,7 @@ layout: default
                         {{ post.description }}
                     </p>
 
-                    <div class="card-footer">
+                    <div class="post-info">
 
                         <span>
                             {{ post.date | date: "%d/%m/%Y" }}
@@ -154,6 +352,43 @@ layout: default
 
             {% endfor %}
 
+
+            <!-- Caso ainda tenha poucos posts -->
+            {% assign post_count = site.posts | size %}
+
+            {% if post_count < 3 %}
+
+                <article class="post-card example-card">
+
+                    <div class="post-image placeholder">
+                        🌱
+                    </div>
+
+                    <div class="post-card-content">
+
+                        <span class="post-category">
+                            APRENDIZADO
+                        </span>
+
+                        <h3>
+                            Coisas que estou aprendendo
+                        </h3>
+
+                        <p>
+                            Esse espaço vai ganhar novos posts
+                            conforme meus estudos forem avançando.
+                        </p>
+
+                        <div class="post-info">
+                            <span>em breve</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            {% endif %}
+
         </div>
 
     </div>
@@ -161,25 +396,25 @@ layout: default
 </section>
 
 
-<section class="about-preview">
+<!-- SOBRE -->
+<section class="about-section">
 
     <div class="container about-grid">
 
-        <div>
+        <div class="about-card">
 
-            <span class="eyebrow">
-                um pouquinho sobre mim
+            <span class="section-label">
+                sobre mim
             </span>
 
             <h2>
-                Estou aprendendo
-                enquanto construo.
+                Aprendendo enquanto construo.
             </h2>
 
             <p>
-                Aqui eu registro meus estudos, projetos,
-                dúvidas, descobertas e tudo aquilo que
-                fizer sentido guardar pelo caminho.
+                Esse blog nasceu como um lugar para guardar
+                meus aprendizados, projetos, dúvidas e
+                descobertas durante minha jornada na tecnologia.
             </p>
 
             <a
@@ -192,15 +427,46 @@ layout: default
         </div>
 
 
-        <div class="about-decoration">
+        <div class="about-image">
 
-            <span>☕</span>
+            <div class="desk">
 
-            <span>💻</span>
+                <div class="monitor">
+                    <div class="monitor-screen">
+                        <span>&lt;/&gt;</span>
+                    </div>
+                </div>
 
-            <span>🌱</span>
+                <div class="coffee-mug">
+                    ☕
+                </div>
+
+                <div class="plant-small">
+                    🌿
+                </div>
+
+                <div class="books">
+                    <span>JAVA</span>
+                    <span>CODE</span>
+                </div>
+
+            </div>
 
         </div>
+
+    </div>
+
+</section>
+
+
+<!-- FRASE FINAL -->
+<section class="little-note">
+
+    <div class="container">
+
+        <span>
+            feito com ☕, curiosidade e algumas linhas de código.
+        </span>
 
     </div>
 
