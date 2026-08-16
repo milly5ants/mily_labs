@@ -2,26 +2,26 @@
 layout: default
 ---
 
+<!-- HERO -->
+
 <section class="hero">
 
-    <div class="container hero-content">
+    <div class="hero-inner">
 
-        <div class="hero-text">
+        <div class="hero-copy">
 
-            <span class="eyebrow">
+            <div class="hello">
                 oi, eu sou a jaja 👋
-            </span>
+            </div>
 
             <h1>
-                Estudando, criando e anotando
-                coisas sobre tecnologia.
+                Estudando, criando e anotando coisas sobre tecnologia.
             </h1>
 
             <p>
-                Um espaço para registrar o que estou
-                aprendendo, os projetos que estou
-                construindo e algumas descobertas
-                pelo caminho.
+                Um espaço para registrar o que estou aprendendo,
+                os projetos que estou construindo e algumas
+                descobertas pelo caminho.
             </p>
 
 
@@ -35,27 +35,75 @@ layout: default
 
             </div>
 
+
+            <a
+                href="#posts"
+                class="hero-button"
+            >
+                explorar posts →
+            </a>
+
         </div>
 
 
-        <div class="hero-illustration">
+        <!-- ILUSTRAÇÃO -->
 
-            <div class="illustration-card">
+        <div class="hero-art">
 
-                <div class="plant">🌿</div>
+            <div class="sparkle sparkle-one">✦</div>
+            <div class="sparkle sparkle-two">✦</div>
 
-                <div class="person">
-                    👩🏻‍💻
+            <div class="little-note">
+                FICA<br>
+                POR AQUI
+            </div>
+
+
+            <div class="person">
+
+                <div class="hair"></div>
+
+                <div class="face">
+
+                    <div class="eye left"></div>
+                    <div class="eye right"></div>
+
+                    <div class="smile"></div>
+
                 </div>
 
-                <div class="laptop">
-                    💻
+
+                <div class="body">
+
+                    <div class="laptop">
+
+                        <div class="screen">
+                            &lt;/&gt;
+                        </div>
+
+                        <div class="keyboard"></div>
+
+                    </div>
+
                 </div>
 
-                <div class="coffee">
-                    ☕
-                </div>
+            </div>
 
+
+            <div class="plant">
+
+                <div class="stem"></div>
+
+                <div class="leaf leaf-one"></div>
+                <div class="leaf leaf-two"></div>
+                <div class="leaf leaf-three"></div>
+                <div class="leaf leaf-four"></div>
+
+            </div>
+
+
+            <div class="coffee">
+                ☕
             </div>
 
         </div>
@@ -65,94 +113,166 @@ layout: default
 </section>
 
 
-<section class="posts-section">
 
-    <div class="container">
+<!-- POSTS -->
 
-        <div class="section-heading">
+<section
+    class="posts-section"
+    id="posts"
+>
+
+    <div class="content-width">
+
+        <div class="section-title">
 
             <h2>
                 Últimos posts
             </h2>
 
-            <a href="#posts">
+            <a href="{{ '/#posts' | relative_url }}">
                 ver todos →
             </a>
 
         </div>
 
 
-        <div
-            class="posts-grid"
-            id="posts"
-        >
+        <div class="posts-grid">
 
-            {% for post in site.posts limit:6 %}
+            {% for post in site.posts limit:3 %}
 
-            <article class="post-card">
+                <article class="post-card">
 
-                {% if post.image %}
+                    <div class="post-cover cover-{{ forloop.index }}">
 
-                <img
-                    src="{{ post.image | relative_url }}"
-                    alt="{{ post.title }}"
-                    class="post-card-image"
-                >
+                        {% if post.image %}
 
-                {% else %}
+                            <img
+                                src="{{ post.image | relative_url }}"
+                                alt="{{ post.title }}"
+                            >
 
-                <div class="post-card-placeholder">
+                        {% else %}
 
-                    {% if post.category == "Java" %}
-                        ☕
-                    {% elsif post.category == "Projeto" %}
-                        💻
-                    {% elsif post.category == "Automação" %}
-                        ⚙️
-                    {% elsif post.category == "Dados" %}
-                        📊
-                    {% else %}
-                        ✨
-                    {% endif %}
+                            {% if post.category == "Java" %}
 
-                </div>
+                                <div class="cover-object java-object">
+                                    ☕
+                                </div>
 
-                {% endif %}
+                            {% elsif post.category == "Projeto" %}
 
+                                <div class="cover-object project-object">
+                                    ✎
+                                </div>
 
-                <div class="post-card-body">
+                            {% elsif post.category == "Aprendizado" %}
 
-                    <span class="card-category">
-                        {{ post.category }}
-                    </span>
+                                <div class="cover-object learning-object">
+                                    🌱
+                                </div>
 
-                    <h3>
-                        <a href="{{ post.url | relative_url }}">
-                            {{ post.title }}
-                        </a>
-                    </h3>
+                            {% else %}
 
-                    <p>
-                        {{ post.description }}
-                    </p>
+                                <div class="cover-object">
+                                    ✦
+                                </div>
 
-                    <div class="card-footer">
+                            {% endif %}
 
-                        <span>
-                            {{ post.date | date: "%d/%m/%Y" }}
-                        </span>
-
-                        <a href="{{ post.url | relative_url }}">
-                            ler →
-                        </a>
+                        {% endif %}
 
                     </div>
 
-                </div>
 
-            </article>
+                    <div class="post-content">
+
+                        {% if post.category %}
+
+                            <span class="post-tag">
+                                {{ post.category }}
+                            </span>
+
+                        {% endif %}
+
+
+                        <h3>
+
+                            <a href="{{ post.url | relative_url }}">
+                                {{ post.title }}
+                            </a>
+
+                        </h3>
+
+
+                        {% if post.description %}
+
+                            <p>
+                                {{ post.description }}
+                            </p>
+
+                        {% endif %}
+
+
+                        <div class="post-meta">
+
+                            <span>
+                                {{ post.date | date: "%d/%m/%Y" }}
+                            </span>
+
+                            <a href="{{ post.url | relative_url }}">
+                                ler →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
 
             {% endfor %}
+
+
+            {% if site.posts.size < 3 %}
+
+                <article class="post-card">
+
+                    <div class="post-cover cover-3">
+
+                        <div class="cover-object learning-object">
+                            🌱
+                        </div>
+
+                    </div>
+
+
+                    <div class="post-content">
+
+                        <span class="post-tag">
+                            APRENDIZADO
+                        </span>
+
+                        <h3>
+                            Coisas que estou aprendendo
+                        </h3>
+
+                        <p>
+                            Esse espaço vai ganhar novos posts
+                            conforme meus estudos forem avançando.
+                        </p>
+
+                        <div class="post-meta">
+
+                            <span>
+                                em breve
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            {% endif %}
 
         </div>
 
@@ -161,44 +281,71 @@ layout: default
 </section>
 
 
-<section class="about-preview">
 
-    <div class="container about-grid">
+<!-- SOBRE -->
 
-        <div>
+<section class="about-section">
 
-            <span class="eyebrow">
-                um pouquinho sobre mim
-            </span>
+    <div class="content-width">
 
-            <h2>
-                Estou aprendendo
-                enquanto construo.
-            </h2>
-
-            <p>
-                Aqui eu registro meus estudos, projetos,
-                dúvidas, descobertas e tudo aquilo que
-                fizer sentido guardar pelo caminho.
-            </p>
-
-            <a
-                href="{{ '/sobre/' | relative_url }}"
-                class="text-link"
-            >
-                conhecer mais sobre mim →
-            </a>
-
-        </div>
+        <div class="about-grid">
 
 
-        <div class="about-decoration">
+            <div class="about-card">
 
-            <span>☕</span>
+                <span class="about-label">
+                    SOBRE MIM
+                </span>
 
-            <span>💻</span>
+                <h2>
+                    Aprendendo enquanto construo.
+                </h2>
 
-            <span>🌱</span>
+                <p>
+                    Esse blog nasceu como um lugar para guardar
+                    meus aprendizados, projetos, dúvidas e
+                    descobertas durante minha jornada na tecnologia.
+                </p>
+
+                <a
+                    href="{{ '/sobre/' | relative_url }}"
+                    class="about-link"
+                >
+                    conhecer mais sobre mim →
+                </a>
+
+            </div>
+
+
+            <div class="about-photo">
+
+                <div class="desk-laptop">
+
+                    <div class="desk-screen">
+                        &lt;/&gt;
+                    </div>
+
+                </div>
+
+
+                <div class="desk-coffee">
+                    ☕
+                </div>
+
+
+                <div class="desk-plant">
+                    🌿
+                </div>
+
+
+                <div class="desk-books">
+
+                    <span>JAVA</span>
+                    <span>CODE</span>
+
+                </div>
+
+            </div>
 
         </div>
 

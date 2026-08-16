@@ -4,38 +4,38 @@ title: "Sobre"
 permalink: /sobre/
 ---
 
-<section class="post-page">
+<section class="single-post">
 
-    <div class="container post-container">
+    <div class="single-post-header">
 
-        <span class="eyebrow">
-            um pouquinho sobre mim
+        <span class="post-tag">
+            SOBRE MIM
         </span>
 
-        <h1 class="post-title">
-            Oi, eu sou a Jaja.
+        <h1>
+            Um pouco sobre mim.
         </h1>
 
-        <div class="post-content">
+    </div>
 
-            <p>
-                Este é meu espaço para registrar coisas que
-                estou aprendendo, construindo e descobrindo
-                na área de tecnologia.
-            </p>
+    <div class="single-post-content">
 
-            <p>
-                Estou estudando programação e explorando
-                diferentes áreas, principalmente desenvolvimento,
-                automação, dados e inteligência artificial.
-            </p>
+        <p>
+            Esse espaço nasceu como uma forma de registrar
+            minha jornada de aprendizado em tecnologia.
+        </p>
 
-            <p>
-                A ideia aqui não é fingir que eu sei tudo.
-                É justamente documentar o processo.
-            </p>
+        <p>
+            Estou estudando, criando projetos, quebrando a cabeça
+            com código e tentando transformar tudo isso em
+            aprendizado de verdade.
+        </p>
 
-        </div>
+        <p>
+            A ideia aqui não é fingir que eu já sei tudo.
+            É justamente o contrário: quero guardar o caminho,
+            inclusive as coisas que deram errado.
+        </p>
 
     </div>
 

@@ -4,34 +4,36 @@ title: "Projetos"
 permalink: /projetos/
 ---
 
-<section class="post-page">
+<section class="single-post">
 
-    <div class="container post-container">
+    <div class="single-post-header">
 
-        <span class="eyebrow">
-            coisas que estou construindo
+        <span class="post-tag">
+            PROJETOS
         </span>
 
-        <h1 class="post-title">
-            Projetos
+        <h1>
+            Coisas que estou construindo.
         </h1>
 
-        <div class="post-content">
+    </div>
 
-            <h2>Todo List em Java</h2>
+    <div class="single-post-content">
 
-            <p>
-                Um projeto criado para praticar Java,
-                orientação a objetos e desenvolvimento backend.
-            </p>
+        <p>
+            Alguns projetos que estou desenvolvendo enquanto
+            estudo programação e tecnologia.
+        </p>
 
-            <h2>Próximos projetos</h2>
+        <h2>
+            Todo List em Java
+        </h2>
 
-            <p>
-                Essa página vai crescer junto com os estudos.
-            </p>
-
-        </div>
+        <p>
+            Um projeto desenvolvido durante meus estudos de Java,
+            trabalhando conceitos de orientação a objetos,
+            classes, objetos e persistência de dados.
+        </p>
 
     </div>
 

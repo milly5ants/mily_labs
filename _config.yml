@@ -1,18 +1,16 @@
-title: "Jaja"
-description: "Tecnologia, projetos e coisas que estou aprendendo."
-url: ""
+title: "Jamily Labs"
+description: "Estudando, criando e anotando coisas sobre tecnologia."
+
+url: "https://milly5ants.github.io"
+baseurl: "/mily_labs"
 
 markdown: kramdown
 
 permalink: /posts/:title/
-
-collections:
-  posts:
-    output: true
 
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: post
